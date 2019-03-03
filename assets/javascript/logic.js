@@ -37,7 +37,7 @@ $(document).ready(function () {
             method: 'GET'
         }).then(function (response) {
             let resultArray = response.data;
-            addImages(resultArray,'#images', 'far fa-heart');
+            addImages(resultArray, '#images', 'far fa-heart');
         })
     })
 
@@ -61,7 +61,7 @@ $(document).ready(function () {
         }
         createButtons([value]);
         favbuttons.push(value);
-        localStorage.setItem('favbuttons',JSON.stringify(favbuttons));
+        localStorage.setItem('favbuttons', JSON.stringify(favbuttons));
         $('#add-button').val('');
     })
 
@@ -77,11 +77,11 @@ $(document).ready(function () {
                                 </div>`);
         })
     }
-    addImages(favorites, '#favs','fas fa-trash-alt');
-    $('body').on('click', '.far', function() {
+    addImages(favorites, '#favs', 'fas fa-trash-alt');
+    $('body').on('click', '.far', function () {
         $(this).removeClass('far');
         $(this).addClass('fas');
-        let newFavorite = $('#'+$(this).attr('data-id'));
+        let newFavorite = $('#' + $(this).attr('data-id'));
         fav = {
             images: {
                 fixed_width: {
@@ -95,14 +95,14 @@ $(document).ready(function () {
             title: newFavorite.attr('alt'),
             rating: newFavorite.attr('data-rating')
         }
-        addImages([fav],'#favs','fas fa-trash-alt');
+        addImages([fav], '#favs', 'fas fa-trash-alt');
         favorites.push(fav);
-        localStorage.setItem('favorites',JSON.stringify(favorites));
+        localStorage.setItem('favorites', JSON.stringify(favorites));
     })
     $('body').on('click', '.fa-trash-alt', function () {
         $(this).closest('.card').remove();
         let i = favorites.findIndex((item) => item.id === $(this).attr('data-id'));
-        favorites.splice(i,1)
-        localStorage.setItem('favorites',JSON.stringify(favorites));
+        favorites.splice(i, 1)
+        localStorage.setItem('favorites', JSON.stringify(favorites));
     })
 })
