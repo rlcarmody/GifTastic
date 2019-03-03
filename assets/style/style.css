@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+
+body {
+    background-color: #828485;
+    color: white;
+    font-family: 'Pontano Sans', sans-serif;
+}
+h1 {
+    font-size: 2em;
+    padding: 10px;
+}
+.banner {
+    text-align: center;
+    background-color: #323639;
+    padding: 15px;
+}
+button, input {
+    font-family: 'Pontano Sans', sans-serif;
+}
+.giphies, button, i{
+    cursor: pointer;
+}
+#images {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 70%;
+    align-content: space-between;
+}
+.container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#buttons {
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+    background-color: #323639;
+    justify-content: space-evenly;
+    padding: 25px;
+}
+.movieButton {
+    width: 200px;
+    margin: 5px;
+    padding: 10px 5px;
+    border: none;
+    background-color: #687985;
+    color: white;
+    font-weight: 600;
+}
+.movieButton:hover {
+    outline: 3px solid #4C509F;
+}
+#input {
+    display: flex;
+    justify-content: center;
+}
+:focus {
+    outline: none;
+}
+::-moz-focus-inner {
+    border:0;
+}
+.selected {
+    background-color: #4C509F;
+}
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#add-button {
+    width: 30%;
+    border-radius: 2px;
+    padding: 3px;
+    font-size: 1.25em;
+}
+form button {
+    padding: 5px 20px;
+    background-color: #687985;
+    color: white;
+    border: none;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+.card {
+    box-sizing: border-box;
+    width: 220px;
+    height: 170px;
+    margin: 0 10px;
+    background-color: #323639;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.img-container {
+    width: 200px;
+    margin: 0 auto;
+    height: 120px;
+    overflow: hidden;
+}
+.img-container:hover {
+    overflow: visible;
+}
+.img-container:active {
+    transform: scale(0.98);
+}
+.giphies:hover {
+    position: absolute;
+    z-index: 1;
+    outline: 3px solid #4C509F;
+}
+.rating {
+    font-weight: 900;
+}
+input {
+    border: none;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+#favs {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
